@@ -1,0 +1,25 @@
+{
+  "name": "pokedex-mvc",
+  "version": "1.0.0",
+  "description": "Projeto MVC de uma pokedex",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anabeatrizalmeida/pokedex-mvc.git"
+  },
+  "author": "Ana Beatriz de Almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anabeatrizalmeida/pokedex-mvc/issues"
+  },
+  "homepage": "https://github.com/anabeatrizalmeida/pokedex-mvc#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
