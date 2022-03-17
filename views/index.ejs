@@ -25,6 +25,28 @@
            <%   }) %>
 
         </section>
+       
+        <section id="cadastro">
+          <h2>Cadastre um novo Pokemon!</h2>
+
+          <form action="/add" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+  
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" name="descricao">
+  
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" name="tipo">
+  
+            <label for="imagem">Link da imagem:</label>
+            <input type="text" id="imagem" name="imagem">
+  
+            <button id="btnCadastrar" type="submit">Cadastrar</button>
+  
+          </form>
+        </section>
+
       </main>
 
   </body>
