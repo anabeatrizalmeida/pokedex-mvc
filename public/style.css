@@ -6,15 +6,41 @@
   font-family: Roboto, Arial;
 }
 
-header {
-  padding: 3rem;
-  background-color: red;
+nav {
+  background-color: rgb(220, 10, 45);
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  scroll-behavior: smooth;
 }
 
-header h1 {
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  padding: .6rem;
+}
+
+nav img {
+  width:3rem;
+}
+nav h1 {
   color: #fff;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 1.4rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+header img {
+width: 100%;
+margin-top: 2.6rem;
 }
 
 main {
@@ -52,9 +78,8 @@ section#cards div.card p.descricao {
   margin-bottom: 1rem;
 }
 
-section#cards div.card a {
+section#cards div.card a#editar {
   padding: 0.6rem;
-  width: 20%;
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -68,8 +93,28 @@ section#cards div.card a {
   margin-top: 2rem;
 }
 
-section#cards div.card a:hover {
+section#cards div.card a#apagar {
+  padding: 0.6rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px rgb(220, 10, 45);
+  color: rgb(220, 10, 45);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+section#cards div.card a#editar:hover {
   background-color: rgb(0, 98, 255);
+  color: #fff;
+}
+
+section#cards div.card a#apagar:hover {
+  background-color: rgb(220, 10, 45);
   color: #fff;
 }
 
@@ -125,4 +170,26 @@ section#cadastro form button {
 section#cadastro form button:hover {
   background-color: red;
   color: #fff;
+}
+
+footer {
+  background-color:rgb(220, 10, 45);
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer p {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1.3rem;
+}
+
+footer p a {
+  text-decoration: none;
+  color: rgb(101, 77, 211);
+  font-weight: 600;
 }
