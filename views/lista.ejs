@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('./components/head') %>
+</head>
+
+    <body>
+        <div id="greygrad">
+        <%- include('./components/navbar') %>
+        <section id="lists">
+        <% series_.forEach((serie) => { %> 
+
+                    <div class="container"> 
+                        <div class="seriesClass">
+                            <div class="seriesClass-card">
+                                <h2 class="name"><%= serie.title%></h2>
+                                <a href="#" class="popup-btn">Detalhes</a>
+                                <img src="<%= serie.image%>" alt="" class="seriesClass-img">
+                            </div>
+                            <!-- segundo card que abre como popup com detalhes -->
+                            <div class="popup-view">
+                                <div class="popup-card">
+                                    <a> <i class="fas fa-times close-btn"></i></a>
+                                    <div class="seriesClass-img">
+                                        <img src="<%= serie.image%>" alt="" class="seriesClass-img">
+                                    </div>
+                                    <div class="info">
+                                        <h2 id="name-info"> <%= serie.title%> <br></h2>
+                                        <span class="tipo"> Ano Lançamento: <%= serie.year%> </span>
+                                        <p> Genero: <%= serie.genre%></p>
+                                        <p><%=serie.description%></p>
+                                    
+                                        <!-- botões para editar e deletar um card -->
+                                        <a href="/getById/<%= serie.id %>/put" class="add-cart-btn">Editar</a>
+                                        <% if(series_.length > 3) {%>
+                                            <a href="/getById/<%= serie.id %>/remove" class="add-wish">Deletar</a>
+                                         <% } %>
+                                         <% if(series_.length < 4) {%>
+                                            <a href="#" id="deletehover" class="add-wish" title="Por favor, não apague toda lista.">Deletar</a>
+                                         <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          
+        <% }) %> 
+
+        <% if (seriePut != null) {%>
+            <%- include('./components/modalPut') %>
+        <% } %>
+
+        <% if (serieDel != null) {%>
+            <%- include('./components/modalDel') %>
+        <% } %>
+
+    </section>
+    </div>
+    </body>
+
+    <script src="/js/scriptModal.js"></script>
+    <script src="/js/scriptAlerts.js"></script>
+    
+</html>
